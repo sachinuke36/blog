@@ -4,6 +4,9 @@ type Props = {}
 
 export default  function Home(props: Props){
   return (
-    <div>Home</div>
+    <div>
+         <h4 className='text-xl font-bold p-3'>All blogs</h4>
+    </div>
+   
   )
 }
