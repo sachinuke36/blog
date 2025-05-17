@@ -1,10 +1,4 @@
-import { Card } from "@/components/ui/card";
-import Link from "next/link";
-import { FaHome } from "react-icons/fa";
-import { MdDashboard } from "react-icons/md";
-import { IoMdAddCircleOutline } from "react-icons/io";
-import { TbLogs } from "react-icons/tb";
-import { CiLogin } from "react-icons/ci";
+
 import Layout from "@/components/Layout";
 
 
