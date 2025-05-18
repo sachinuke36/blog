@@ -1,10 +1,13 @@
 import { useAppContext } from "@/contexts/AppContext";
-import { useState } from "react"
+import { useCallback, useState } from "react"
 import { toast } from "sonner";
 
-export const getUser = async()=>{
-    const { setUser, user, backendUrl } = useAppContext()
+export const useUser = ()=>{
     const [loading, setLoading] = useState<boolean>(true);
+    const [user, setUser] = useState<any>(null);
+    const {  backendUrl } = useAppContext()
+
+    const getUser = useCallback(async()=>{
     try {
         const response = await fetch(backendUrl + '/api/auth/getuser',{
             method:"GET",
@@ -21,5 +24,11 @@ export const getUser = async()=>{
         setLoading(false);
     }
 
-    return { loading, user}
+},[]);
+return { loading, user, getUser};
+
+
+
 }
+
+

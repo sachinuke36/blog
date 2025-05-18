@@ -56,8 +56,29 @@ const useAuth = () => {
         }
     }
 
+    const logout = async ()=>{
+        setLoading(true);
+        try {
+           const response = await fetch(backendUrl+ '/api/auth/logout',{
+                method: "POST",
+                credentials: "include",
+                headers: {"Content-Type" : "application/json"}
+            });
+            const { message } = await response.json();
+            console.log(message);
+            toast(message);
+            setUser(null)
+            router.refresh();
+        } catch (error) {
+            console.log(error);
+            toast((error as Error)?.message || "Something went wrong.");
+        }finally{
+            setLoading(false);
+        }
+    }
 
-    return {login, loading, register}
+
+    return {login, loading, register, logout}
 }
 
 export default useAuth

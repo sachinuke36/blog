@@ -12,7 +12,7 @@ const Scroller = ({myBlogs, Title}:{myBlogs:Blog[], Title:string}) => {
         <ScrollArea className="w-full rounded-md ">
       <div className="flex w-max space-x-4 p-4">
       {
-        myBlogs.map((blog: Blog, i) => (
+        myBlogs?.map((blog: Blog, i) => (
           <BlogCard blog={blog} key={blog.id} />
         ))
       }

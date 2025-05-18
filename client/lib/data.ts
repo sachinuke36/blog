@@ -6,7 +6,8 @@ export type Blog={
     createdAt: string,
     updatedAt: string,
     id: string,
-    status: "PUBLISHED" | "DRAFT"
+    status: "PUBLISHED" | "DRAFT",
+    authorName?: string
 }
 export const blogs: Blog[] = [
   {
