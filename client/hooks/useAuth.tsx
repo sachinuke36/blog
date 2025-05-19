@@ -45,9 +45,9 @@ const useAuth = () => {
         });
         const { data, message, success } = await response.json();
         console.log(message);
-        setUser(data);
+        // setUser(data);
         toast(message);
-        if (success) router.push('/home');
+        // if (success) router.push('/home');
         } catch (error) {
             console.log(error);
             toast((error as Error)?.message || "Something went wrong.");

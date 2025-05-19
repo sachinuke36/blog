@@ -33,7 +33,7 @@ export async function register(req: Request, res: Response):Promise<any>{
             const response = await prisma.user.create({data:{ email, name, password: hashedPass}});
             console.log(response);
             const newUser = await prisma.user.findFirst({where: {email}});
-            return res.status(201).json({message: "Registration successful", user: newUser, success: true});
+            return res.status(201).json({message: "Registration successful, please login!", data: newUser, success: true});
         } catch (error) {
             console.log("Error in registration!", error);
         }

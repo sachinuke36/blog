@@ -9,7 +9,7 @@ const AllBlogs = () => {
   return (
     <div>
       {
-        allBlogs.map((blog: Blog)=><BlogCard2 blog={blog} key={blog.id}/>)
+        allBlogs?.map((blog: Blog)=><BlogCard2 blog={blog} key={blog?.id}/>)
       }
     </div>
   )

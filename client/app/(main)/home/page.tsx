@@ -16,7 +16,7 @@ export default  function Home(props: Props){
       </div>
       <div className='p-3 flex flex-wrap gap-4'>
            {
-          allBlogs?.map((blog: Blog)=><BlogCard2 blog={blog} key={blog.id}/>)
+          allBlogs?.map((blog: Blog)=><BlogCard2 blog={blog} key={blog?.id}/>)
         }
           
       </div>
