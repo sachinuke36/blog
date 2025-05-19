@@ -42,9 +42,9 @@ const AuthForm = () => {
 
 
   return (
-<div className="h-[100vh] w-[100vw] bg-gradient-to-br from-orange-200 via-orange-50 to-orange-800">
-        <form onSubmit={handleSubmit}>
-            <Tabs defaultValue="account" className="w-[400px] mx-auto pt-[10vh] ">
+<div className="min-h-screen  w-full bg-gradient-to-br from-orange-200 via-orange-50 to-orange-800">
+        <form className="w-[300px] sm:w-[400px] mx-auto " onSubmit={handleSubmit}>
+      <Tabs defaultValue="account" className="w-[300px] sm:w-[400px] mx-auto pt-[10vh] ">
       <TabsList className="grid w-full grid-cols-2">
         <TabsTrigger className='' value="account">Register</TabsTrigger>
         <TabsTrigger value="login">Login</TabsTrigger>

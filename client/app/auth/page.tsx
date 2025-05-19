@@ -1,7 +1,15 @@
+"use client"
 import AuthForm from '@/components/AuthForm'
-import React from 'react'
+import { useAppContext } from '@/contexts/AppContext'
+import { useRouter } from 'next/navigation'
+import React, { useEffect } from 'react'
 
 const AuthPage = () => {
+  const router = useRouter();
+  const { user } = useAppContext();
+  useEffect(()=>{
+    if(user) router.replace('/home')
+  },[router])
   return (
     <div>
       <AuthForm/>

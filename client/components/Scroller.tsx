@@ -10,7 +10,7 @@ const Scroller = ({myBlogs, Title}:{myBlogs:Blog[], Title:string}) => {
         <h4 className='font-semibold text-xl'>{Title}</h4>
     <div className='w-full h-full flex gap-1 '>
         <ScrollArea className="w-full rounded-md ">
-      <div className="flex w-max space-x-4 p-4">
+      <div className="flex w-max space-x-4 p-3">
       {
         myBlogs?.map((blog: Blog, i) => (
           <BlogCard blog={blog} key={blog.id} />

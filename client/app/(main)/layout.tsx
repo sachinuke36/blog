@@ -1,5 +1,7 @@
 
 import Layout from "@/components/Layout";
+import Navbar from "@/components/Navbar";
+import Link from "next/link";
 
 
 export default function MainLayout({
@@ -9,14 +11,19 @@ export default function MainLayout({
 }>) {
   return (
     <div className="flex h-screen w-screen bg-[#0F0F0F] overflow-hidden p-2">
-      {/* Sidebar */}
-      <Layout />
+  <Layout />
 
-      {/* Main content */}
-      <main className="flex-1 rounded-2xl overflow-y-auto p-2  bg-[#1b1b1b] text-white shadow-sm shadow-amber-600">
-        {children}
-      </main>
-    </div>
+  <div className="flex-1 flex flex-col overflow-hidden rounded-2xl bg-[#1b1b1b] text-white shadow-sm shadow-amber-600">
+    
+    <Navbar/>
+
+    <main className="flex-1 overflow-y-auto p-2">
+      {children}
+    </main>
+    
+  </div>
+</div>
+
   );
 }
 

@@ -47,7 +47,7 @@ const Layout = () => {
   };
 
   return (
-    <div className="w-[250px] box-border h-screen px-2">
+    <div className="w-[250px] hidden sm:block box-border h-screen px-2">
       <Card className="flex border-none flex-col box-border h-[calc(100vh-16px)] bg-[#1C1C1C] flex-1">
         <div>
           <h3 className="mx-4 font-bold text-3xl text-white">Blog <span className="text-indigo-500">Hub</span></h3>

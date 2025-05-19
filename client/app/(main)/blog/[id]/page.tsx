@@ -18,13 +18,13 @@ const Blog = ({params}: { params: Promise<{ id: string }> }) => {
   return (
     <div className='p-2 flex flex-col gap-4'>
         <div>
-             <h2 className='text-2xl text-center font-semibold'>{blog?.title}</h2>
-             <h4 className='text-xl text-orange-500 font-bold flex justify-end'>{blog?.authorName}</h4>
+             <h2 className=' text-xl sm:text-2xl text-center font-semibold'>{blog?.title}</h2>
+             <h4 className='text-lg sm:text-xl text-orange-500 font-bold flex justify-end'>{blog?.authorName}</h4>
         </div>
      
-      <p className='px-4'>{blog?.content}</p>
+      <p className='px-4 text-sm sm:text-md'>{blog?.content}</p>
       <p className='px-4 text-sm'> <BlogDate date={blog?.updatedAt} /> </p>
-      <div className='flex gap-2 px-4'>{blog?.tags.map((tag)=> <div className='text-[14px] shadow-purple-300 shadow-sm  bg-[#121111] px-1'>{tag}</div>)}</div>
+      <div className='flex gap-2 px-4 flex-wrap'>{blog?.tags.map((tag, i)=> <div key={i} className='text-[10px] flex items-center justify-center sm:text-[14px] shadow-purple-300 shadow-sm  bg-[#121111] px-1'>{tag}</div>)}</div>
     </div>
   )
 }
